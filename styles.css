@@ -1,0 +1,312 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url("fonts/TTLakes-Regular.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url("fonts/TTLakes-Medium.woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url("fonts/TTLakes-DemiBold.woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url("fonts/TTLakes-Bold.woff");
+    font-weight: 700;
+}
+
+/* Отключение стилей по умолчанию */
+
+html,
+body {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Глобалные наследуемые стили */
+
+body {
+    font-family: "TT Lakes", "Helvetica", "sans-serif";
+    font-size: 14px;
+    color: #1B1C21;
+}
+
+/* Фон для страницы */
+
+body {
+    color: #1B1C21;
+}
+
+/* Шапка */
+
+.header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9FFF5;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.header__item {
+    width: 40px;
+    height: 40px;
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.header__item:last-child {
+    margin-right: 16px;
+}
+
+.header__logo {
+    height: 50px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.header__divider {
+    background-color: #EAEAEA;
+    width: 2px;
+    min-width: 2px;
+    height: 32px;
+    border-radius: 1px;
+}
+
+.header__divider--automargin--320 {
+    margin-left: auto;
+}
+
+/* Заголовок с "подсветкой" (бирюзовая скругленная штучка слева) */
+
+.heading {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.heading__text {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 28px;
+    margin: 0;
+}
+
+.heading__item {
+    display: none;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.heading__item:first-of-type {
+    margin-left: auto;
+}
+
+.heading__item-text {
+    margin-right: 8px;
+}
+
+.heading__item-img {
+    margin-right: 32px;
+}
+
+.heading__text::before {
+    content: "";
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    margin-right: 12px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Список услуг, прокручивается скроллом на маленьких экранах */
+
+.service-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    overflow-x: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    color: #7E7E82;
+}
+
+.service-list__item {
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+.service-list__item:last-child {
+    margin-right: 0;
+}
+
+.service-list__item--selected {
+    background-color: #FFFFFF;
+    border: 2px solid #B8FFEC;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* Ссылка "Читиать дальше" со стрелочками */
+
+.expand {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.expand::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url("img/expand.svg");
+}
+
+/* Основная картинка */
+
+.photo {
+    display: block;
+    margin-top: 16px;
+}
+
+/* Скрытие элементов на маленьких экранах (mobile first) */
+
+.header__divider--min--768,
+.header__item--min--768,
+.about-text--min--768,
+.about-text--min--1120 {
+    display: none;
+}
+
+/* Подсветка интерактивных элементов */
+
+/* Наведенные */
+.header__logo:hover,
+.header__item:hover,
+.heading__item:hover,
+.service-list__item:hover,
+.expand:hover {
+    filter: brightness(0.9);
+}
+
+/* Нажатые */
+.header__logo:active,
+.header__item:active,
+.heading__item:active,
+.service-list__item:active,
+.expand:active {
+    filter: brightness(0.8);
+}
+
+/* Фон для элемента списка, иначе подсветка filter'ом не работает */
+.service-list__item:hover {
+    background-color: #FFFFFF;
+}
+
+/* Адаптивные стили */
+
+@media (min-width: 768px) {
+    /* Убрать автоотступ у правого разделителя */
+
+    .header__divider--automargin--320 {
+        margin-left: 16px;
+    }
+
+    /* Показать элементы хедера для 768+ */
+
+    .header__item--min--768 {
+        display: block;
+    }
+
+    /* Добавить автоотступ для самого левого 768+ элемента */
+
+    .header__item--automargin--768 {
+        margin-left: auto;
+    }
+
+    /* Показать второй параграф текста */
+
+    .about-text--min--768 {
+        display: block;
+    }
+
+    /* Поменять расположение текста и картиники (было: сверху-вниз, стало: слева-направо) */
+
+    .content {
+        flex-direction: row;
+    }
+
+    /* Текст и картинка занимают 50/50 места */
+
+    .content__text {
+        width: 50%;
+    }
+
+    /* Картинке теперь нужен отступ и закругленные края (и пол экрана ширины) */
+
+    .photo {
+        border-radius: 6px;
+        margin-right: 16px;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1120px) {
+    /* Показать вторую половину второго параграфа текста */
+
+    .about-text--min--1120 {
+        display: inline;
+    }
+
+    /* Включить перенос по строкам элементов списка услуг */
+
+    .service-list {
+        flex-wrap: wrap;
+    }
+
+    /* Показать кнопки в заголовке */
+
+    .heading__item {
+        display: flex;
+    }
+
+    /* Убрать хедер (в макете так, хотя выглядит странно???) */
+
+    .header {
+        display: none;
+    }
+}
