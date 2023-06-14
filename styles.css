@@ -53,11 +53,14 @@ body {
 /* Шапка */
 
 .header {
+  height: 88px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #ffffff;
   border-bottom: 1px solid #d9fff5;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: stretch;
   overflow-x: auto;
 }
 
@@ -65,8 +68,6 @@ body {
   width: 40px;
   height: 40px;
   margin-left: 16px;
-  margin-top: 24px;
-  margin-bottom: 24px;
 }
 
 .header__item:last-child {
@@ -87,7 +88,12 @@ body {
   border-radius: 1px;
 }
 
-.header__divider--automargin--320 {
+.header__block {
+  display: flex;
+  align-items: center;
+}
+
+.header__block--right {
   margin-left: auto;
 }
 
@@ -205,7 +211,7 @@ body {
 /* Скрытие элементов на маленьких экранах (mobile first) */
 
 .header__divider--min--768,
-.header__item--min--768,
+.header__block--min--768,
 .about-text--min--768,
 .about-text--min--1120 {
   display: none;
@@ -239,22 +245,25 @@ body {
 /* Адаптивные стили */
 
 @media (min-width: 768px) {
-  /* Убрать автоотступ у правого разделителя */
+  /* Убрать автоотступ у правого блока хедера */
 
-  .header__divider--automargin--320 {
-    margin-left: 16px;
+  .header__block--right {
+    margin-left: 0;
   }
 
-  /* Показать элементы хедера для 768+ */
+  /* Показать блок хедера 768+, с автоотступом */
 
-  .header__item--min--768 {
-    display: block;
-  }
-
-  /* Добавить автоотступ для самого левого 768+ элемента */
-
-  .header__item--automargin--768 {
+  .header__block--min--768 {
+    display: flex;
     margin-left: auto;
+  }
+
+  /* Показать разделитель между бургером и лого на 768+ */
+
+  .header__divider--min--768 {
+    display: block;
+    margin-left: 20px;
+    margin-right: 4px;
   }
 
   /* Показать второй параграф текста */

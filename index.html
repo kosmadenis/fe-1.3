@@ -6,29 +6,38 @@
 
   <body>
     <header class="header">
-      <a href="#" class="header__item"
-        ><img src="assets/images/burger.svg"
-      /></a>
-      <div class="header__divider header__divider--min--768"></div>
-      <a href="#" class="header__logo"><img src="assets/images/logo.svg" /></a>
-      <a
-        href="#"
-        class="header__item header__item--min--768 header__item--automargin--768"
-        ><img src="assets/images/call.svg"
-      /></a>
-      <a href="#" class="header__item header__item--min--768"
-        ><img src="assets/images/chat.svg"
-      /></a>
-      <a href="#" class="header__item header__item--min--768"
-        ><img src="assets/images/profile.svg"
-      /></a>
-      <div class="header__divider header__divider--automargin--320"></div>
-      <a href="#" class="header__item"
-        ><img src="assets/images/repair.svg"
-      /></a>
-      <a href="#" class="header__item"
-        ><img src="assets/images/checkstatus.svg"
-      /></a>
+      <!-- Бургер + лого -->
+      <div class="header__block">
+        <a href="#" class="header__item"
+          ><img src="assets/images/burger.svg"
+        /></a>
+        <div class="header__divider header__divider--min--768"></div>
+        <a href="#" class="header__logo"
+          ><img src="assets/images/logo.svg"
+        /></a>
+      </div>
+      <!-- Справа: кнопки 768+ -->
+      <div class="header__block header__block--right header__block--min--768">
+        <a href="#" class="header__item"
+          ><img src="assets/images/call.svg"
+        /></a>
+        <a href="#" class="header__item"
+          ><img src="assets/images/chat.svg"
+        /></a>
+        <a href="#" class="header__item"
+          ><img src="assets/images/profile.svg"
+        /></a>
+      </div>
+      <!-- Справа: разделитель + кнопки 320 -->
+      <div class="header__block header__block--right">
+        <div class="header__divider"></div>
+        <a href="#" class="header__item"
+          ><img src="assets/images/repair.svg"
+        /></a>
+        <a href="#" class="header__item"
+          ><img src="assets/images/checkstatus.svg"
+        /></a>
+      </div>
     </header>
     <main class="main">
       <div class="heading">
