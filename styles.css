@@ -205,15 +205,11 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
+  border: 2px solid rgba(0, 0, 0, 0);
 }
 
 .service-list__item:last-child {
   margin-right: 0;
-}
-
-.service-list__item--selected {
-  background-color: #ffffff;
-  border: 2px solid #b8ffec;
 }
 
 .content {
@@ -266,7 +262,6 @@ body {
 .header__logo:hover,
 .header__item:hover,
 .heading__item:hover,
-.service-list__item:hover,
 .expand:hover {
   filter: brightness(0.9);
 }
@@ -275,14 +270,25 @@ body {
 .header__logo:active,
 .header__item:active,
 .heading__item:active,
-.service-list__item:active,
 .expand:active {
   filter: brightness(0.8);
 }
 
-/* Фон для элемента списка, иначе подсветка filter'ом не работает */
-.service-list__item:hover {
+/* Список услуг */
+
+.service-list__item:hover,
+.service-list__item:active,
+.service-list__item:focus {
+  border: 2px solid #b8ffec;
+}
+
+.service-list__item:hover,
+.service-list__item:focus {
   background-color: #ffffff;
+}
+
+.service-list__item:active {
+  background-color: #fbfbfb;
 }
 
 /* Адаптивные стили */
