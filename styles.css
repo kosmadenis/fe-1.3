@@ -154,6 +154,38 @@ body {
 
 /* Список услуг, прокручивается скроллом на маленьких экранах */
 
+.service-list-wrapper {
+  position: relative;
+}
+
+.service-list-wrapper::before,
+.service-list-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  /* Выход на 2пкс вверх и вниз, чтобы перкрывать рамки (border, outline) */
+  height: 44px;
+  top: -2px;
+}
+
+.service-list-wrapper::before {
+  left: 0px;
+  background: linear-gradient(
+    to left,
+    rgba(248, 248, 248, 0) 0%,
+    rgba(248, 248, 248, 1) 85%
+  );
+}
+
+.service-list-wrapper::after {
+  right: 0px;
+  background: linear-gradient(
+    to right,
+    rgba(248, 248, 248, 0) 0%,
+    rgba(248, 248, 248, 1) 85%
+  );
+}
+
 .service-list {
   margin-top: 0;
   margin-bottom: 0;
