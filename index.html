@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <a class="header__item" href=""><img src="assets/images/burger.svg"></a>
-        <div class="header__divider header__divider--min--768"></div>
-        <a class="header__logo" href=""><img src="assets/images/logo.svg"></a>
-        <a class="header__item header__item--min--768 header__item--automargin--768" href=""><img
-                src="assets/images/call.svg"></a>
-        <a class="header__item header__item--min--768" href=""><img src="assets/images/chat.svg"></a>
-        <a class="header__item header__item--min--768" href=""><img src="assets/images/profile.svg"></a>
-        <div class="header__divider header__divider--automargin--320"></div>
-        <a class="header__item" href=""><img src="assets/images/repair.svg"></a>
-        <a class="header__item" href=""><img src="assets/images/checkstatus.svg"></a>
+      <a class="header__item" href=""><img src="assets/images/burger.svg" /></a>
+      <div class="header__divider header__divider--min--768"></div>
+      <a class="header__logo" href=""><img src="assets/images/logo.svg" /></a>
+      <a
+        class="header__item header__item--min--768 header__item--automargin--768"
+        href=""
+        ><img src="assets/images/call.svg"
+      /></a>
+      <a class="header__item header__item--min--768" href=""
+        ><img src="assets/images/chat.svg"
+      /></a>
+      <a class="header__item header__item--min--768" href=""
+        ><img src="assets/images/profile.svg"
+      /></a>
+      <div class="header__divider header__divider--automargin--320"></div>
+      <a class="header__item" href=""><img src="assets/images/repair.svg" /></a>
+      <a class="header__item" href=""
+        ><img src="assets/images/checkstatus.svg"
+      /></a>
     </header>
     <main class="main">
-        <div class="heading">
-            <h1 class="heading__text">Услуги и сервисы</h1>
-            <a class="heading__item" href="">
-                <span class="heading__item-text">Оставить заявку</span>
-                <img class="heading__item-img" src="assets/images/repair.svg">
-            </a>
-            <a class="heading__item" href="">
-                <span class="heading__item-text">Статус ремонта</span>
-                <img class="heading__item-img" src="assets/images/checkstatus.svg">
-            </a>
+      <div class="heading">
+        <h1 class="heading__text">Услуги и сервисы</h1>
+        <a class="heading__item" href="">
+          <span class="heading__item-text">Оставить заявку</span>
+          <img class="heading__item-img" src="assets/images/repair.svg" />
+        </a>
+        <a class="heading__item" href="">
+          <span class="heading__item-text">Статус ремонта</span>
+          <img class="heading__item-img" src="assets/images/checkstatus.svg" />
+        </a>
+      </div>
+      <ul class="service-list">
+        <li class="service-list__item service-list__item--selected">
+          Ремонтируемые&nbsp;бренды
+        </li>
+        <li class="service-list__item">Ремонтируемые&nbsp;устройства</li>
+        <li class="service-list__item">Дополнительные&nbsp;услуги</li>
+        <li class="service-list__item">Адреса&nbsp;сервисных&nbsp;центров</li>
+        <li class="service-list__item">Цены&nbsp;на&nbsp;услуги</li>
+        <li class="service-list__item">Специальные&nbsp;цены</li>
+        <li class="service-list__item">Отзывы</li>
+      </ul>
+      <article class="content">
+        <div class="content__text">
+          <p class="about-text">
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.
+          </p>
+          <p class="about-text about-text--min--768">
+            <span
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера</span
+            >
+            <span class="about-text--min--1120"
+              >, что подтверждает большое количество постоянных клиентов. Мы
+              гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</span
+            >
+          </p>
+          <a class="expand" href="">Читать далее</a>
         </div>
-        <ul class="service-list">
-            <li class="service-list__item service-list__item--selected">Ремонтируемые&nbsp;бренды</li>
-            <li class="service-list__item">Ремонтируемые&nbsp;устройства</li>
-            <li class="service-list__item">Дополнительные&nbsp;услуги</li>
-            <li class="service-list__item">Адреса&nbsp;сервисных&nbsp;центров</li>
-            <li class="service-list__item">Цены&nbsp;на&nbsp;услуги</li>
-            <li class="service-list__item">Специальные&nbsp;цены</li>
-            <li class="service-list__item">Отзывы</li>
-        </ul>
-        <article class="content">
-            <div class="content__text">
-                <p class="about-text">
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                    отремонтировать
-                    свой ноутбук Dell с официальной гарантией производителя.
-                </p>
-                <p class="about-text about-text--min--768">
-                    <span>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span>
-                    <span class="about-text--min--1120">, что подтверждает большое количество постоянных клиентов. Мы
-                        гордимся
-                        тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и
-                        близким.</span>
-                </p>
-                <a class="expand" href="">Читать далее</a>
-            </div>
-            <img class="photo" src="assets/images/photo.jpg">
-        </article>
+        <img class="photo" src="assets/images/photo.jpg" />
+      </article>
     </main>
-</body>
-
+  </body>
 </html>
